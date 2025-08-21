@@ -22,7 +22,7 @@ class Solution(object):
             if x == 0: return f * result
             
     def reverse_1(self, x):
-        if x < -2**31 or x > 2**31 -1: return 0
+        if x < -2 ** 31 or x > 2 ** 31 - 1: return 0
 
         d = 1
         if x < 0:
@@ -30,6 +30,7 @@ class Solution(object):
             x *= -1
         
         xStr = str(x)
-        result = d*int(xStr[::-1])
-        if result < -2**31 or result > 2**31 -1: return 0
+        result = d * int(xStr[::-1])
+        if result < -2 ** 31 or result > 2 ** 31 - 1: return 0
+
         return result
